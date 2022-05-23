@@ -10,14 +10,11 @@
   <%= @user.email %>
 </p>
 
-<%
-=begin%>
- <p>
+  <p>
   <strong>first_microPost:</strong>
   <%= @micropost_data %>
-</p> 
-<%
-=end%>
+  </p> 
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
