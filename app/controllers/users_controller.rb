@@ -10,8 +10,12 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    
-    @micropost_data = Micropost.find_by(user_id:params[:id]).content
+    microData = Micropost.find_by(user_id:params[:id])
+    if microData
+      @micropost_data = microData.content
+    else 
+      @micropost_data = "no data.\n"+"plese post your thnking!"
+    end
   end
 
   # GET /users/new
